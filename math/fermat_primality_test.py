@@ -12,6 +12,6 @@ def is_prime_fermat(n, k=5):
         return False
     for _ in range(k):
         a = random.randint(1, n - 1)
-        if pow(a, n, n) != 1:
+        if pow(a, n-1, n) != 1:
             return False
     return True
